@@ -1,4 +1,4 @@
-main.pyimport discord
+import discord
 from discord.ext import commands
 from discord.ui import Button, View
 import json
@@ -12,16 +12,15 @@ intents.guilds = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# ---------- CONFIG (CHANGE THESE) ----------
-WELCOME_CHANNEL_ID = 0          # put your welcome channel id
-VERIFY_CHANNEL_ID = 0           # channel where verify button will be
-VERIFIED_ROLE_ID = 0            # role people get after verifying
-LEVEL_UP_CHANNEL_ID = 0         # 0 = same channel the message was sent in
+# ---------- CONFIG ----------
+WELCOME_CHANNEL_ID = 0          # change later
+VERIFY_CHANNEL_ID = 0           # change later
+VERIFIED_ROLE_ID = 0            # change later
+LEVEL_UP_CHANNEL_ID = 0
 
-TOKEN = "YOUR_BOT_TOKEN_HERE"
-# ------------------------------------------
+TOKEN = "MTU1NTMzNDU3NDkzMjg4NTUzNA.G5M90p.mRV1AyIVRWWqaOuCW4Zt1Kt78DtQPRXlpKHk3Q"
+# ----------------------------
 
-# create levels file if it doesn't exist
 if not os.path.exists("levels.json"):
     with open("levels.json", "w") as f:
         json.dump({}, f)
